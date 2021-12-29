@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "9JLYewEQPNQREvmleKKmUaagcuKY4rNbaqTpbGmK4kFBP/KtmS/yMfFrTfiMaDOdVepyQ0o3gSQmopwf7QwXSA==",
+  "success": true,
+  "projectFilePath": "D:\\Me\\Learn\\AsyncAwaitDemo\\AsyncDemo\\AsyncDemo.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.13\\microsoft.netcore.app.host.win-x64.5.0.13.nupkg.sha512"
+  ],
+  "logs": []
+}
