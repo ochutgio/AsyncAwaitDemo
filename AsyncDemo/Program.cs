@@ -8,6 +8,11 @@ namespace AsyncDemo
     {
         public static async Task Main(string[] args)
         {
+            Console.WriteLine("Start");
+            await DoSomethingAsync();
+            await DoSomething2Async();
+            await DoSomething3Async();
+
             Console.WriteLine("Demo");
             await Task.Delay(2000);
             Console.WriteLine("000");
