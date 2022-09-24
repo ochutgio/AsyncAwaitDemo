@@ -8,21 +8,21 @@ namespace AsyncDemo
     {
         public static async Task Main(string[] args)
         {
-            Console.WriteLine("Start");
+            Console.WriteLine("Start 3 tasks use await still block behind code");
             await DoSomethingAsync();
             await DoSomething2Async();
             await DoSomething3Async();
+            Console.WriteLine("Total time for 3 tasks: 5s + 1s + 3s = 9s");
 
-            Console.WriteLine("Demo");
-            await Task.Delay(2000);
-            Console.WriteLine("000");
+            Console.WriteLine("");
+            Console.WriteLine("Demo Async 3 tasks");
             var task1 = DoSomethingAsync();
-            Console.WriteLine("111");
+            Console.WriteLine("Task 1 is running - 5s");
             var task2 = DoSomething2Async();
-            Console.WriteLine("222");
+            Console.WriteLine("Task 2 is running - 1s");
             var task3 = DoSomething3Async();
-            Console.WriteLine("333");
-
+            Console.WriteLine("task 3 is running - 3s");
+            
             var resultTasks = new List<Task> { task1, task2, task3 };
             while (resultTasks.Count > 0)
             {
@@ -42,8 +42,8 @@ namespace AsyncDemo
                 resultTasks.Remove(finishedTask);
             }
 
-            // await Task.WhenAll(task1, task2, task3);
-            // Console.WriteLine("Done All!");
+            await Task.WhenAll(task1, task2, task3);
+            Console.WriteLine("Total time for 3 tasks: 5s");
 
             Console.ReadLine();
 
